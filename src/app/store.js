@@ -1,8 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
-
+import paginationReducer from '../features/pagination/pagination-slice';
+import mainListReducer from '../features/mainList/mainList-slice';
+import pokemonDetailsReducer from '../features/pokemonDetails/pokemonDetails-slice'
+;
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    details: pokemonDetailsReducer,
+    pagination: paginationReducer,
+    mainList: mainListReducer
   },
 });
